@@ -1,8 +1,6 @@
 Flask
 imutils
-Keras
 opencv-python-headless==4.5.4.60
 Pillow
-tensorflow
 scikit-image
 gunicorn
