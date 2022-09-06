@@ -1,7 +1,8 @@
-Flask==1.1.1
-imutils==0.5.3
-Keras==2.9.0
-opencv-python==4.6.0.66
-Pillow==9.2.0
-tensorflow==2.9.2
-scikit-image==0.19.3
+Flask
+imutils
+Keras
+opencv-python-headless==4.5.4.60
+Pillow
+tensorflow
+scikit-image
+gunicorn
