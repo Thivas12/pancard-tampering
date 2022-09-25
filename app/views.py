@@ -62,8 +62,13 @@ def index():
                 cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_uploaded.jpg'), uploaded_image)
                 cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_diff.jpg'), diff)
                 cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_thresh.jpg'), thresh)
-                return render_template('index.html',pred=str(round(score*100,2)) + '%' + ' correct')
-       
+                # return render_template('index.html',pred=str(round(score*100,2)) + '%' + ' correct')
+		pred = str(round(score*100,2))
+		if pred > 75:
+			return render_template('index.html' + 'Original')
+		else:
+			return render_template('index.html' + 'Tampered')
+		
 # Main function
 if __name__ == '__main__':
     app.run(debug=True)
