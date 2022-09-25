@@ -27,7 +27,7 @@ def index():
                 filename = file_upload.filename
                 
                 # Resize and save the uploaded image
-                uploaded_image = Image.open(file_upload).resize((250,160))
+                uploaded_image = Image.open(file_upload).resize((252,160))
                 uploaded_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image.jpg'))
 
                 # Resize and save the original image to ensure both uploaded and original matches in size
